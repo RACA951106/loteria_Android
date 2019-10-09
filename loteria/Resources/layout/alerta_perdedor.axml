@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:lottie_fileName="cara_triste.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+	<TextView
+		android:id="@+id/lbl_nombre_usuario"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textAlignment="center"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:text="Usuario"
+		android:textColor="#ffb20222"
+		android:textSize="35dp" 
+            />
+    <TextView
+		android:id="@+id/lbl_ganador"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textAlignment="center"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:text="ganador: Alex"
+		android:textColor="#ffb20222"
+		android:textSize="15dp" 
+            />
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:id="@+id/btn_menu"
+		android:text="Ir al menú"
+		android:layout_marginLeft="50dp"
+		android:layout_marginRight="50dp"
+		android:background="@drawable/redondear_boton"
+		android:textColor="#ffffffff"
+		android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+		 />
+</LinearLayout>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_degradado"
+        android:scaleType="centerCrop"
+        />
+<com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/fuegos_artificiales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:lottie_fileName="fireworks.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="false" />
+<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_feria"
+        android:scaleType="centerCrop"
+        />
+<ImageView
+        android:id="@+id/mono"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mono"
+		android:gravity="bottom"
+        />
+<LinearLayout
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/letrero"
+        android:scaleX="0"
+        android:scaleY="0"
+        android:src="@drawable/loteria_letrero"
+        />
+	<LinearLayout
+		android:layout_width="match_parent"
+            android:id="@+id/lineaRoja"
+        android:layout_marginTop="200dp"
+        android:background = "#ffb20222"
+                            android:alpha="0"
+		android:orientation = "vertical"
+		android:layout_height="100dp"
+		android:gravity="center">
+		<EditText
+			android:background = "#ffb20222"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#FFF"
+			android:textAlignment="center"
+			android:hint="Toca para editar"
+			android:id="@+id/txt_usuario"
+			android:textSize="30dp"
+			android:gravity="center"
+			android:textAllCaps="false"
+			android:capitalize="words"
+			android:inputType="text"
+			android:textColorHint="#ff780013" />
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAlignment="center"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:text="Nombre de Usuario"
+			android:textColor="#ffffffff"
+			android:textSize="15dp" 
+            />
+	</LinearLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:gravity="bottom">
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:text="Crear Partida"
+                                android:alpha="0"
+			android:id="@+id/btn_crear"
+			android:layout_marginLeft="50dp"
+			android:layout_marginRight="50dp"
+			android:background="@drawable/redondear_boton"
+			android:layout_marginBottom="20dp"
+			android:textColor="#ffffffff" 
+		 />
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:id="@+id/btn_unirse"
+                android:alpha="0"
+			android:text="Unirse a la Partida"
+			android:layout_marginLeft="50dp"
+			android:layout_marginRight="50dp"
+            android:layout_marginBottom="50dp"
+			android:background="@drawable/redondear_boton"
+			android:textColor="#ffffffff" 
+		 />
+	</LinearLayout>
+</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:lottie_fileName="radar.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+	<LinearLayout
+		android:orientation="vertical"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/linearLayout1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:textSize="17dp"
+            android:textAlignment="center"
+			android:layout_gravity="center"
+			android:gravity="center"
+            android:text="Para que tus amigos se unan a la partida, pídeles que entren al menú y toque la opción “Unirse a la partida”, el juego les pedirá que coloquen la dirección IP de tu teléfono, la cual es:" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textAlignment="center"
+			android:layout_gravity="center"
+			android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/txt_IP" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textAlignment="center"
+			android:layout_gravity="center"
+			android:gravity="center"
+            android:id="@+id/txt_jugadores" />
+         <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:lottie_fileName="buscar_triangulo.json"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true" />
+		<Button
+			android:text="Jugar"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+            android:layout_marginLeft="50dp"
+			android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#ffffffff"
+            android:background="@drawable/redondear_boton"
+			android:id="@+id/btn_jugar" />
+        <Button
+			android:text="Cancelar"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+            android:layout_marginLeft="50dp"
+			android:layout_marginRight="50dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#ffffffff"
+            android:background="@drawable/redondear_boton"
+			android:id="@+id/btn_cancelar" />
+    </LinearLayout>
+</RelativeLayout>

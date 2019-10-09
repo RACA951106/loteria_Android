@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:id="@+id/linearLayout2"
+		android:background="#ffdbefff">
+		<LinearLayout
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/redondear_boton_juego"
+			android:id="@+id/btn_rendirse">
+
+			<com.airbnb.lottie.LottieAnimationView
+				android:id="@+id/animation_view"
+				android:layout_width="match_parent"
+				android:layout_height="60dp"
+				android:layout_marginTop="5dp"
+				android:layout_marginBottom="15dp"
+				app:lottie_fileName="rendirse.json"
+				app:lottie_loop="true"
+				app:lottie_speed="0.2"
+				app:lottie_autoPlay="true"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:textColor="#fff"
+				android:layout_marginBottom="5dp"
+				android:textAlignment="center"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="Rendirse"/>
+
+		</LinearLayout>
+		<ImageView
+			android:src="@drawable/reverso"
+			android:layout_width="111dp"
+			android:layout_height="153dp"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="10dp"
+			android:id="@+id/img_carta_actual" />
+		<ImageView
+			android:layout_width="83dp"
+			android:layout_height="115dp"
+			android:id="@+id/img_carta_anterior" />
+		<LinearLayout
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:background="@drawable/redondear_boton_juego"
+			android:orientation="vertical"
+			android:id="@+id/btn_buenas">
+
+			<com.airbnb.lottie.LottieAnimationView
+				android:id="@+id/animation_view"
+				android:layout_width="match_parent"
+				android:layout_height="80dp"
+				app:lottie_fileName="buenas.json"
+				app:lottie_loop="true"
+				app:lottie_speed="0.2"
+				app:lottie_autoPlay="true" />
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="20dp"
+				android:textColor="#fff"
+				android:textAlignment="center"
+				android:layout_marginBottom="5dp"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:text="Buenas"/>
+
+		</LinearLayout>
+	</LinearLayout>
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffdbefff"
+            android:id="@+id/linearLayout1">
+            <GridLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:background="#ffdbefff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="4"
+                android:columnCount="4"
+                android:id="@+id/gridLayout1" >
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta1"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta2"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta3"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta4"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta5"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta6"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta7"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta8"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta9"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta10"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta11"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta12"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta13"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta14"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta15"
+                    android:tag="0" />
+                <ImageView
+                    android:layout_columnWeight="1"
+                    android:layout_columnSpan="1"
+                    android:layout_rowWeight="1"
+                    android:layout_rowSpan="1"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerInside"
+                    android:background="#ffdbefff"
+                    android:id="@+id/carta16"
+                    android:tag="0" />
+                
+            </GridLayout>    
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

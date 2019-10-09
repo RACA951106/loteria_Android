@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+		android:layout_marginTop="20dp"
+		android:layout_marginBottom="20dp"
+		android:layout_width="match_parent"
+		android:orientation = "vertical"
+		android:layout_height="150dp"
+		android:background = "#ffb20222"
+		android:gravity="center">
+		<EditText
+			android:background = "#ffb20222"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="#FFF"
+			android:textAlignment="center"
+			android:hint="Toca para editar"
+			android:text="192.168.1."
+			android:id="@+id/txt_IP_Server"
+			android:textSize="30dp"
+			android:gravity="center"
+			android:capitalize="words"
+			android:inputType="text"
+			android:textColorHint="#ff780013" />
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAlignment="center"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:text="IP de quien creo la partida"
+			android:textColor="#ffffffff"
+			android:textSize="15dp" 
+            />
+	</LinearLayout>
+	<Button
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:id="@+id/btn_conectar"
+			android:text="Conectar"
+			android:layout_marginLeft="50dp"
+			android:layout_marginRight="50dp"
+			android:background="@drawable/redondear_boton"
+			android:textColor="#ffffffff" 
+		 />
+    <Button
+        android:layout_marginTop="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+			android:id="@+id/btn_cancelar"
+			android:text="Cancelar"
+			android:layout_marginLeft="50dp"
+			android:layout_marginRight="50dp"
+			android:background="@drawable/redondear_boton"
+			android:textColor="#ffffffff" 
+		 />
+
+</LinearLayout>
