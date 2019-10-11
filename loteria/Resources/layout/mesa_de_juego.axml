@@ -92,195 +92,176 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffdbefff"
+            android:background="#fff"
             android:id="@+id/linearLayout1">
-            <GridLayout
-                android:minWidth="25px"
-                android:minHeight="25px"
-                android:background="#ffdbefff"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:rowCount="4"
-                android:columnCount="4"
-                android:id="@+id/gridLayout1" >
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta1"
+                    android:src="@drawable/carta1"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta2"
+                    android:src="@drawable/carta2"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta3"
+                    android:src="@drawable/carta3"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta4"
+                    android:src="@drawable/carta4"
                     android:tag="0" />
+             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta5"
+                    android:src="@drawable/carta5"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta6"
+                    android:src="@drawable/carta6"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta7"
+                    android:src="@drawable/carta7"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta8"
+                    android:src="@drawable/carta8"
                     android:tag="0" />
+             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta9"
+                    android:src="@drawable/carta9"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta10"
+                    android:src="@drawable/carta10"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta11"
+                    android:src="@drawable/carta11"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta12"
+                    android:src="@drawable/carta12"
                     android:tag="0" />
+             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta13"
+                    android:src="@drawable/carta13"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta14"
+                    android:src="@drawable/carta14"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta15"
+                    android:src="@drawable/carta15"
                     android:tag="0" />
                 <ImageView
-                    android:layout_columnWeight="1"
-                    android:layout_columnSpan="1"
-                    android:layout_rowWeight="1"
-                    android:layout_rowSpan="1"
                     android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="150dp"
                     android:scaleType="centerInside"
                     android:background="#ffdbefff"
                     android:id="@+id/carta16"
+                    android:src="@drawable/carta16"
                     android:tag="0" />
-                
-            </GridLayout>    
+             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

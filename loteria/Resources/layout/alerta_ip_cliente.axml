@@ -31,7 +31,7 @@
 			android:textAlignment="center"
 			android:layout_gravity="center"
 			android:gravity="center"
-			android:text="IP de quien creo la partida"
+			android:text="coloca la IP de quien creo la partida"
 			android:textColor="#ffffffff"
 			android:textSize="15dp" 
             />

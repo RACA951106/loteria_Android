@@ -49,12 +49,12 @@ namespace loteria
             //obtener la medida de la pantalla
             var metrics = Resources.DisplayMetrics;
 
-            if (metrics.HeightPixels < 1200)
-            {
-                LinearLayout.LayoutParams ll = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WrapContent, linearRojo.Height);
-                ll.SetMargins(0, 0, 0, 0);
-                linearRojo.LayoutParameters = ll;
-            }
+            //if (metrics.HeightPixels < 1200)
+            //{
+            //    LinearLayout.LayoutParams ll = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WrapContent, linearRojo.Height);
+            //    ll.SetMargins(0, 0, 0, 0);
+            //    linearRojo.LayoutParameters = ll;
+            //}
 
             //poner por defecto la medida de la pantalla en la imagen
             mono.TranslationY = metrics.HeightPixels / 3;

@@ -15,8 +15,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:lottie_fileName="fireworks.json"
-        app:lottie_loop="true"
-        app:lottie_autoPlay="false" />
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true" />
 <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,52 +34,62 @@
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
+
         <ImageView
-            android:layout_marginTop="40dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:id="@+id/letrero"
         android:scaleX="0"
         android:scaleY="0"
         android:src="@drawable/loteria_letrero"
         />
-	<LinearLayout
+
+        <LinearLayout
 		android:layout_width="match_parent"
-            android:id="@+id/lineaRoja"
-        android:layout_marginTop="200dp"
-        android:background = "#ffb20222"
-                            android:alpha="0"
-		android:orientation = "vertical"
-		android:layout_height="100dp"
-		android:gravity="center">
-		<EditText
-			android:background = "#ffb20222"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:textColor="#FFF"
-			android:textAlignment="center"
-			android:hint="Toca para editar"
-			android:id="@+id/txt_usuario"
-			android:textSize="30dp"
-			android:gravity="center"
-			android:textAllCaps="false"
-			android:capitalize="words"
-			android:inputType="text"
-			android:textColorHint="#ff780013" />
-		<TextView
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:textAlignment="center"
-			android:layout_gravity="center"
-			android:gravity="center"
-			android:text="Nombre de Usuario"
-			android:textColor="#ffffffff"
-			android:textSize="15dp" 
-            />
-	</LinearLayout>
-	<LinearLayout
+		android:layout_height="0dp"
+            android:layout_weight="1"
+		android:orientation="vertical"
+		android:gravity="bottom">
+	        <LinearLayout
+		        android:layout_width="match_parent"
+                    android:id="@+id/lineaRoja"
+                android:background = "#ffb20222"
+                android:alpha="0"
+		        android:orientation = "vertical"
+		        android:layout_height="100dp"
+		        android:gravity="center">
+		        <EditText
+			        android:background = "#ffb20222"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="#FFF"
+			        android:textAlignment="center"
+			        android:hint="Toca para editar"
+			        android:id="@+id/txt_usuario"
+			        android:textSize="30dp"
+			        android:gravity="center"
+			        android:textAllCaps="false"
+			        android:capitalize="words"
+			        android:inputType="text"
+			        android:textColorHint="#ff780013" />
+		        <TextView
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textAlignment="center"
+			        android:layout_gravity="center"
+			        android:gravity="center"
+			        android:text="Nombre de Usuario"
+			        android:textColor="#ffffffff"
+			        android:textSize="15dp" 
+                    />
+	        </LinearLayout>
+        </LinearLayout>
+
+	    <LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
+		android:layout_height="0dp"
+            android:layout_weight="1"
 		android:orientation="vertical"
 		android:gravity="bottom">
 		<Button
@@ -107,6 +117,7 @@
 			android:textColor="#ffffffff" 
 		 />
 	</LinearLayout>
+
 </LinearLayout>
 
 </RelativeLayout>
