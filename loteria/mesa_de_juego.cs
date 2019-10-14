@@ -601,7 +601,7 @@ namespace loteria
                                 //detener la partida y decirles a todos quien gano
                                 byte[] mensaje = new byte[100];
 
-                                mensaje = Encoding.Default.GetBytes("ganador$" + cliente.nombre_jugador);
+                                mensaje = Encoding.Default.GetBytes("ganador$" + cliente.nombre_jugador + "$" + cliente.ip_jugador);
                                 Console.WriteLine(mensaje);
 
                                 foreach (var item in Clientes)
@@ -930,7 +930,17 @@ namespace loteria
                         switch (data)
                         {
                             case "server_error":
-                                Toast.MakeText(this, "el server se cago", ToastLength.Short).Show();
+                                //detener todos los hilos
+                                hilo_recibir_carta.Abort();
+                                ////guardar bandera para reproducir la musica
+                                //ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+                                //prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+                                //ISharedPreferencesEditor editor = prefs.Edit();
+                                //editor.PutBoolean("pref_back_from_game", true);
+                                //editor.Apply();
+                                Toast.MakeText(this, "el server se desconecto", ToastLength.Short).Show();
+                                //reiniciar el juego
+                                this.Finish();
                                 break;
                             default:
                                 var info = data.Split("$");
@@ -938,43 +948,89 @@ namespace loteria
                                 {
                                     //detener todos los hilos
                                     hilo_recibir_carta.Abort();
-                                    //enviar mensaje de ganador al cliente
-                                    View custom_alert = LayoutInflater.Inflate(Resource.Layout.alerta_ganador, null);
-                                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                                    AlertDialog alert = builder.Create();
-                                    alert.SetView(custom_alert);
-                                    alert.SetCancelable(false);
 
-                                    //reproducir sonido de ganador
-                                    Reproductor.MediaPlayer reproductor_ganador = Reproductor.MediaPlayer.Create(this, Resource.Raw.ganaste);
-                                    Reproductor.MediaPlayer reproductor_ganador_musica = Reproductor.MediaPlayer.Create(this, Resource.Raw.win);
-
-                                    reproductor_ganador.Start();
-                                    reproductor_ganador_musica.Start();
-
-                                    custom_alert.FindViewById<TextView>(Resource.Id.lbl_nombre_usuario).Text = "Ganaste " + jugador;
-
-                                    custom_alert.FindViewById<Button>(Resource.Id.btn_menu).Click += delegate
+                                    //saber si fuiste el ganador
+                                    if (info[2] == obtenerIP().ToString())
                                     {
-                                        player_musica_fondo.Stop();
-                                        player_musica_busqueda.Stop();
-                                        player_musica_juego.Stop();
+                                        //enviar mensaje de ganador al cliente
+                                        View custom_alert = LayoutInflater.Inflate(Resource.Layout.alerta_ganador, null);
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                                        AlertDialog alert = builder.Create();
+                                        alert.SetView(custom_alert);
+                                        alert.SetCancelable(false);
+
+                                        //reproducir sonido de ganador
+                                        Reproductor.MediaPlayer reproductor_ganador = Reproductor.MediaPlayer.Create(this, Resource.Raw.ganaste);
+                                        Reproductor.MediaPlayer reproductor_ganador_musica = Reproductor.MediaPlayer.Create(this, Resource.Raw.win);
+
+                                        reproductor_ganador.Start();
+                                        reproductor_ganador_musica.Start();
+
+                                        custom_alert.FindViewById<TextView>(Resource.Id.lbl_nombre_usuario).Text = "Ganaste " + jugador;
+
+                                        custom_alert.FindViewById<Button>(Resource.Id.btn_menu).Click += delegate
+                                        {
+                                            player_musica_fondo.Stop();
+                                            player_musica_busqueda.Stop();
+                                            player_musica_juego.Stop();
                                         //guardar bandera para reproducir la musica
                                         ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
-                                        prefs = PreferenceManager.GetDefaultSharedPreferences(this);
-                                        ISharedPreferencesEditor editor = prefs.Edit();
-                                        editor.PutBoolean("pref_back_from_game", true);
-                                        editor.Apply();
+                                            prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+                                            ISharedPreferencesEditor editor = prefs.Edit();
+                                            editor.PutBoolean("pref_back_from_game", true);
+                                            editor.Apply();
 
                                         //detener la musica
                                         reproductor_ganador.Stop();
-                                        reproductor_ganador.Release();
-                                        reproductor_ganador_musica.Stop();
-                                        reproductor_ganador_musica.Release();
+                                            reproductor_ganador.Release();
+                                            reproductor_ganador_musica.Stop();
+                                            reproductor_ganador_musica.Release();
 
-                                        this.Finish();
-                                    };
-                                    alert.Show();
+                                            this.Finish();
+                                        };
+                                        alert.Show();
+                                    }
+                                    else
+                                    {
+                                        //enviar mensaje de pededor al cliente
+                                        View custom_alert = LayoutInflater.Inflate(Resource.Layout.alerta_perdedor, null);
+                                        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                                        AlertDialog alert = builder.Create();
+                                        alert.SetView(custom_alert);
+                                        alert.SetCancelable(false);
+
+                                        //reproducir sonido de ganador
+                                        Reproductor.MediaPlayer reproductor_perdedor = Reproductor.MediaPlayer.Create(this, Resource.Raw.perdiste);
+                                        Reproductor.MediaPlayer reproductor_perdedor_musica = Reproductor.MediaPlayer.Create(this, Resource.Raw.fail);
+
+                                        reproductor_perdedor.Start();
+                                        reproductor_perdedor_musica.Start();
+
+                                        custom_alert.FindViewById<TextView>(Resource.Id.lbl_nombre_usuario).Text = "Perdiste " + jugador;
+                                        custom_alert.FindViewById<TextView>(Resource.Id.lbl_ganador).Text = "Gano: " + info[1];
+
+                                        custom_alert.FindViewById<Button>(Resource.Id.btn_menu).Click += delegate
+                                        {
+                                            player_musica_fondo.Stop();
+                                            player_musica_busqueda.Stop();
+                                            player_musica_juego.Stop();
+                                            //guardar bandera para reproducir la musica
+                                            ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+                                            prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+                                            ISharedPreferencesEditor editor = prefs.Edit();
+                                            editor.PutBoolean("pref_back_from_game", true);
+                                            editor.Apply();
+
+                                            //detener la musica
+                                            reproductor_perdedor.Stop();
+                                            reproductor_perdedor.Release();
+                                            reproductor_perdedor.Stop();
+                                            reproductor_perdedor.Release();
+
+                                            this.Finish();
+                                        };
+                                        alert.Show();
+                                    }
                                 }
                                 else if(info[0] == "trampa")
                                 {
